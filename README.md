@@ -14,7 +14,7 @@ The program structure is as follows:
 ## Usage
 1. Build and Deploy: Build the project and deploy it to a servlet container (e.g., Apache Tomcat).
 
-2. Access the Form: Open the form in a web browser by navigating to http://localhost:8080/YourWebAppName/index.html.
+2. Access the Form: Run the project in your server and it will open to http://localhost:8080/YourProjectName/.
 
 3. Submit Form: Enter a username and password in the form and click the "Submit" button.
 
