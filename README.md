@@ -51,8 +51,8 @@ public class ServletClass extends HttpServlet {
 
 ```
 Explanation:
-Cookie nameCookie = new Cookie("name", username);: This line creates a new Cookie object named "name" with the value of the submitted username.
-response.addCookie(nameCookie);: This line adds the cookie to the response. The client's browser will receive and store this cookie for subsequent requests.
+- **Cookie nameCookie = new Cookie("name", username);** : This line creates a new Cookie object named "name" with the value of the submitted username.
+- **response.addCookie(nameCookie);** : This line adds the cookie to the response. The client's browser will receive and store this cookie for subsequent requests.
 
 **Servlet2 - Cookie Retrieval**
 
@@ -80,14 +80,11 @@ public class Servlet2 extends HttpServlet {
 
 ```
 Explanation:
-Cookie[] cookies = request.getCookies();
-This line retrieves an array of cookies from the client's request.
-for (Cookie cookie : cookies) { ... }: 
-This loop iterates through the cookies.
-if (cookie.getName().equals("name")) { ... }: 
-This condition checks if the current cookie has the name "name" (the name created in ServletClass).
-String usernameFromCookie = cookie.getValue();: 
-If the cookie is found, this line retrieves the value of the cookie, which is the username set in ServletClass. You can use usernameFromCookie as needed in your servlet logic.
+
+- **Cookie[] cookies = request.getCookies();**: This line retrieves an array of cookies from the client's request.
+- **for (Cookie cookie : cookies) { ... }** : This loop iterates through the cookies.
+- **if (cookie.getName().equals("name")) { ... }** : This condition checks if the current cookie has the name "name" (the name created in ServletClass).
+- **String usernameFromCookie = cookie.getValue();** : If the cookie is found, this line retrieves the value of the cookie, which is the username set in ServletClass. You can use usernameFromCookie as needed in your servlet logic.
 
 These snippets illustrate the creation of a cookie in ServletClass and the retrieval of cookies in Servlet2. Cookies provide a way to store small pieces of information on the client's browser, allowing you to maintain state between multiple requests from the same client.
 
